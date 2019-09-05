@@ -1,0 +1,38 @@
+package org.softserve.opencartapp.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.softserve.opencartapp.core.BasePage;
+
+public class WhatWouldYouLikeToDoNext extends BasePage {
+
+    public WhatWouldYouLikeToDoNext(WebDriver driver) {
+        super(driver);
+    }
+
+    By useCouponCode = By.xpath("//*[@id=\"accordion\"]/div[1]/div[1]");
+    By estimateShippingTaxes = By.xpath("//*[@id=\"accordion\"]/div[2]/div[1]");
+    By useGiftCertificate = By.xpath("//*[@id=\"accordion\"]/div[3]/div[1]");
+    By enterCouponField = By.id("input-coupon");
+
+
+    public void goToPage() {
+        getDriver().get("http://taqc-dp170.zzz.com.ua/index.php?route=checkout/cart");
+    }
+
+    public void expandUseCouponCode(){
+        getElement(useCouponCode).click();
+    }
+
+    public void expandEstimateShippingTaxes(){
+        getElement(estimateShippingTaxes).click();
+    }
+
+    public void expandUseGiftCertificate(){
+        getElement(useGiftCertificate).click();
+    }
+
+
+
+}
