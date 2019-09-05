@@ -1,0 +1,18 @@
+package org.softserve.opencartapp.tests;
+
+import org.openqa.selenium.WebDriver;
+import org.softserve.opencartapp.core.BaseTest;
+import org.softserve.opencartapp.pages.WhatWouldYouLikeToDoNext;
+
+public class FTC_WhatWouldYouLikeToDoNextTest extends BaseTest {
+
+    private WhatWouldYouLikeToDoNext wwyltdNext = new WhatWouldYouLikeToDoNext(getDriver());
+
+    public void enterCouponCode(){
+        wwyltdNext.goToPage();
+        wwyltdNext.expandUseCouponCode();
+    }
+
+
+
+}
